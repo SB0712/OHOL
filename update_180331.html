@@ -6,14 +6,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1><a href="index.html">One Hour One Life</a></h1>
 
+  <h1><a class="base_link" href="index.html">One Hour One Life</a></h1>
     <div id="grid">
       <div class="list">
       <ul>
-        <li><a href="strategy.html">공략</a></li><br>
+        <li><a class="base_link" href="strategy.html">공략</a></li><br>
         <li><a href="update.html" style="color:red;text-decoration:underline;">업데이트</a></li><br>
-        <li><a href="story.html">이야기</a></li><br>
+        <li><a class="base_link" href="story.html">이야기</a></li><br>
       </ul>
     </div><!--list-->
     <div class="contents">
@@ -72,6 +72,8 @@
         -<a href="https://onetech.info/33-Stone" target="_blank">돌</a><br>
         -<a href="https://onetech.info/729-Alum" target="_blank">명반</a><br>
       </p>
+
+      <input type="button" value="목록" onclick="history.back(-1);">
 
       <p>
       <div id="disqus_thread"></div>
