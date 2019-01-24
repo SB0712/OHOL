@@ -1,12 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>원아워 원라이프 공략 - One hour One life</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <script>
+  function NightDayHendler(self){
+    var body = document.querySelector('body')
+    if(self.value === '야간모드') {
+      body.style.backgroundColor = 'black';
+      body.style.color = 'gray';
+      self.value = '주간모드';
+
+      var base_link = document.querySelectorAll('.base_link');
+      var i = 0;
+      while(i < base_link.length){
+      base_link[i].style.color = 'gray';
+      i = i + 1}
+    } else {
+      body.style.backgroundColor = 'white';
+      body.style.color = 'black';
+      self.value = '야간모드';
+
+      var base_link = document.querySelectorAll('.base_link');
+      var i = 0;
+      while(i < base_link.length){
+      base_link[i].style.color = 'black';
+      i = i + 1}
+    }
+  }
+  </script>
 </head>
 <body>
 
+  <p align="right">
+  <input type="button" value="야간모드" onclick="
+  NightDayHendler(this)
+  ">
+</p>
+<!--querySelector=선택한 태그,class,id를 하나만 가져옴 즉, var base_link = document.querySelector('.base_link');는 class가 base_link인 것 중 첫번째인 OHOL만을 뜻한다.
+전부는 querySelectorAll을 사용. querySelectorAll은 배열의 형태로 결과를 준다.-->
   <h1><a class="base_link" href="index.html">One Hour One Life</a></h1>
 
   <div id="grid">
@@ -21,9 +54,16 @@
       <h2>안녕하세요.</h2>
       <P>OHOL <strong>공략법</strong>과 매주 진행되는 <strong>업데이트</strong>를 <strong>한국어</strong>로 게시하는 사이트입니다.</P>
       <p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/mT4JktcVQuE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        OHOL 공식 트레일러
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mT4JktcVQuE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+        <strong>OHOL 공식 트레일러</strong> 자막에서 한국어를 클릭하시면 한국자막을 보실 수 있습니다.
       </p>
+
+      <p align="right">
+      <input type="button" value="야간모드" onclick="
+      NightDayHendler(this)
+      ">
+    </p>
+    
     </div>
   </div>
 </body>

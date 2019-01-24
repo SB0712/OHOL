@@ -1,11 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>원아워 원라이프 공략 - One hour One life</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <script>
+  function NightDayHendler(self){
+    var body = document.querySelector('body')
+    if(self.value === '야간모드') {
+      body.style.backgroundColor = 'black';
+      body.style.color = 'gray';
+      self.value = '주간모드';
+
+      var base_link = document.querySelectorAll('.base_link');
+      var i = 0;
+      while(i < base_link.length){
+      base_link[i].style.color = 'gray';
+      i = i + 1}
+    } else {
+      body.style.backgroundColor = 'white';
+      body.style.color = 'black';
+      self.value = '야간모드';
+
+      var base_link = document.querySelectorAll('.base_link');
+      var i = 0;
+      while(i < base_link.length){
+      base_link[i].style.color = 'black';
+      i = i + 1}
+    }
+  }
+  </script>
 </head>
 <body>
+
+  <p align="right">
+  <input type="button" value="야간모드" onclick="
+  NightDayHendler(this)
+  ">
+</p>
 
   <h1><a class="base_link" href="index.html">One Hour One Life</a></h1>
 
@@ -14,7 +46,7 @@
       <ul>
       <li><a class="base_link" href="strategy.html">공략</a></li><br>
       <li><a class="base_link" href="update.html">업데이트</a></li><br>
-      <li><a href="story.html" style="color:red;text-decoration:underline;">이야기</a></li><br>
+      <li><a href="story.html" style="color:red; text-decoration:underline;">이야기</a></li><br>
     </ul>
   </div>
   <div class="contents">
@@ -23,6 +55,13 @@
       목록
     </p>
       <li><a href="story_190120.html">공동생활과 육아. 복수극은 게임 내에서도 벌어진다.</a> 2019.01.20</li>
+
+    <p align="right">
+    <input type="button" value="야간모드" onclick="
+    NightDayHendler(this)
+    ">
+  </p>
+
   </div>
 </div>
 </body>
